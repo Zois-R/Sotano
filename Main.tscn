@@ -1,0 +1,264 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://SOTANO.png" type="Texture" id=1]
+[ext_resource path="res://Jugador_1.gd" type="Script" id=2]
+[ext_resource path="res://Nena_stop.png" type="Texture" id=3]
+[ext_resource path="res://saltnado.png" type="Texture" id=4]
+[ext_resource path="res://nena_corriendo.png" type="Texture" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 69.1826, 47.3076 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 41.0115, 17.4295 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 34.8599, 17.4294 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 34.8599, 29.7327 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 813.336, 19.0237 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 64.3204, 88.9532 )
+
+[sub_resource type="Animation" id=7]
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_jug1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite_jug1:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite_jug1:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_jug1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite_jug1:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite_jug1:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite_jug1:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite_jug1:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 3, 4, 5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite_jug1:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+
+[node name="Main" type="Node2D"]
+position = Vector2( 2.05054, 0 )
+
+[node name="Mapa" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 799.12, 519.588 )
+texture = ExtResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Mapa"]
+editor/display_folded = true
+position = Vector2( -414.21, 297.329 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D"]
+position = Vector2( -6.15161, -12.3032 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Mapa"]
+editor/display_folded = true
+position = Vector2( -178.397, 157.892 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D2"]
+position = Vector2( -10.2529, -2.05054 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Mapa"]
+editor/display_folded = true
+position = Vector2( 14.3538, 65.6174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D3"]
+position = Vector2( -2.05084, 6.15161 )
+shape = SubResource( 1 )
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Mapa"]
+editor/display_folded = true
+position = Vector2( 14.3538, 65.6174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D4"]
+position = Vector2( 381.401, 248.116 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Mapa"]
+editor/display_folded = true
+position = Vector2( 14.3538, 65.6174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D5"]
+position = Vector2( 451.119, 190.701 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="Mapa"]
+editor/display_folded = true
+position = Vector2( 14.3538, 65.6174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D6"]
+position = Vector2( 508.534, 137.386 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="Mapa"]
+editor/display_folded = true
+position = Vector2( 14.3538, 65.6174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D7"]
+position = Vector2( 570.051, 86.1227 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="Mapa"]
+editor/display_folded = true
+position = Vector2( 14.3538, 65.6174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D8"]
+position = Vector2( 635.668, 30.7581 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="Mapa"]
+editor/display_folded = true
+position = Vector2( 14.3538, 65.6174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D9"]
+position = Vector2( 705.387, -22.5561 )
+shape = SubResource( 3 )
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="Mapa"]
+position = Vector2( 14.3538, 65.6174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D10"]
+position = Vector2( 758.701, -71.7691 )
+shape = SubResource( 4 )
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="Mapa"]
+position = Vector2( 14.3538, 65.6174 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mapa/StaticBody2D11"]
+position = Vector2( -15.1085, 291.285 )
+shape = SubResource( 5 )
+
+[node name="Jugador_1" type="Position2D" parent="."]
+position = Vector2( 20.5054, -36.9098 )
+script = ExtResource( 2 )
+
+[node name="Cuerpo_1" type="KinematicBody2D" parent="Jugador_1"]
+position = Vector2( 245.991, -49.0836 )
+
+[node name="Sprite_jug1" type="Sprite" parent="Jugador_1/Cuerpo_1"]
+position = Vector2( -111.545, 649.309 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador_1/Cuerpo_1"]
+position = Vector2( -112.15, 649.674 )
+shape = SubResource( 6 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Jugador_1/Cuerpo_1"]
+anims/Saltando = SubResource( 7 )
+anims/chicastop = SubResource( 8 )
+anims/corriendo = SubResource( 9 )
+
+[node name="Camera2D" type="Camera2D" parent="Jugador_1/Cuerpo_1"]
+position = Vector2( 569.508, 560.741 )
+current = true
+zoom = Vector2( 1.5, 1.5 )
