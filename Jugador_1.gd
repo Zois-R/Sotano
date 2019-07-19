@@ -3,8 +3,7 @@ var Velocidad= Vector2()
 var gravedad=4000
 var velocidad_mov=2500
 var vel_salto=25000
-var puede_saltar= false
-
+var puede_saltar= true
 
 func _physics_process(delta):
 	Velocidad.y += gravedad*delta
